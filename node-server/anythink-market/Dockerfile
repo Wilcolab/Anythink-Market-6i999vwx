@@ -2,10 +2,10 @@
 FROM node:14
 
 # Set the working directory in the container
-WORKDIR /src/app
+WORKDIR /app
 
 # Copy the dependencies file to the working directory
-COPY package*.json /src/app
+COPY package*.json /app
 
 # Install the dependencies
 RUN yarn install
