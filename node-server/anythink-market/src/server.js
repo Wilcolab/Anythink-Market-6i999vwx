@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
+// Endpoint to add a new task
 app.post('/tasks', (req, res) => {
     const task = req.body;
     if (task && task.text) {
