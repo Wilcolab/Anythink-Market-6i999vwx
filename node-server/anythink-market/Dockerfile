@@ -2,13 +2,16 @@
 FROM node:14
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy the dependencies file to the working directory
-COPY package*.json /app
+COPY package*.json ./
 
 # Install the dependencies
 RUN yarn install
+
+# Copy the rest of the application code
+COPY . .
 
 # Expose the port on which the server will run
 EXPOSE 8001
